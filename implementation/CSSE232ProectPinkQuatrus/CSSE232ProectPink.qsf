@@ -1,0 +1,82 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 16:19:03  January 21, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		CSSE232ProectPink_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE auto
+set_global_assignment -name TOP_LEVEL_ENTITY control_unit
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:19:02  JANUARY 21, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE tb_magenta_stage_ALUControl_ALU_ALUOut_RegA_RegB.v
+set_global_assignment -name VERILOG_FILE inte_stage1_part1.v
+set_global_assignment -name VERILOG_FILE magenta_stage_ALUControl_ALU_ALUOut_RegA_RegB.v
+set_global_assignment -name VERILOG_FILE tb_control_unit.v
+set_global_assignment -name VERILOG_FILE control_unit.v
+set_global_assignment -name VERILOG_FILE register.v
+set_global_assignment -name VERILOG_FILE alu.v
+set_global_assignment -name VERILOG_FILE immediate_generator.v
+set_global_assignment -name VERILOG_FILE tb_alu.v
+set_global_assignment -name VERILOG_FILE tb_memory.v
+set_global_assignment -name VERILOG_FILE tb_immediate_generator.v
+set_global_assignment -name VERILOG_FILE tb_register.v
+set_global_assignment -name VERILOG_FILE register_file.v
+set_global_assignment -name VERILOG_FILE tb_register_file.v
+set_global_assignment -name VERILOG_FILE tb_alu_register_file.v
+set_global_assignment -name VERILOG_FILE tb_reg_immediate_generator.v
+set_global_assignment -name VERILOG_FILE alu_control.v
+set_global_assignment -name VERILOG_FILE tb_alu_control.v
+set_global_assignment -name VERILOG_FILE memory.v
+set_global_assignment -name VERILOG_FILE regFile_immgen_sp.v
+set_global_assignment -name VERILOG_FILE tb_regFile_immgen_sp.v
+set_global_assignment -name VERILOG_FILE tb_inte_stage1_part1.v
+set_global_assignment -name VERILOG_FILE headless_machine.v
+set_global_assignment -name VERILOG_FILE tb_headless_machine.v
+set_global_assignment -name VERILOG_FILE memory_wrap.v
+set_global_assignment -name VERILOG_FILE final_machine.v
+set_global_assignment -name VERILOG_FILE tb_final_machine.v

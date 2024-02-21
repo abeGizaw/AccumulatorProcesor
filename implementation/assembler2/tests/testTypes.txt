@@ -1,0 +1,36 @@
+temp: .word -1      //0x1E00 -> 0001 1110 0000 0000 = 0 0000 0000
+result: .word  2    //0x1E02 -> 0001 1110 0000 0010 = 0 0000 0000
+zero: .word 0       //0x1E04 -> 0001 1110 0000 0100 = 0 0000 0000
+one: .word 1        //0x1E06 -> 0001 1110 0000 0110 = 0 0000 0000
+
+relPrime: // 0
+    addi r2 2
+
+loop: // 2
+    jal gcd
+    beq r3 r2 exitRel
+    jal loop
+
+exitRel: // 8
+    jb 0x0
+
+gcd: // A
+    bne r2 r1 continue
+    jb 0x0
+
+continue: // E 0x000e
+    bne r2 r0 while
+    jal exitGcd
+
+while: // 10
+    blt r0 r1 else
+    jal check
+
+else: // 12
+    jal check
+
+check: // 14
+    bne r0 r2 while
+
+exitGcd: // 16
+    jb 0x0
