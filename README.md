@@ -1,5 +1,5 @@
 # Accumulator-Based Processor
-
+4 Person Project  
 ## High-Level Description
 
 This repository contains the design and implementation details of a custom accumulator-based processor architecture. Our processor features four accumulators to optimize instruction execution by reducing the number of operations that directly access memory, thereby enhancing performance by keeping track of more variables efficiently. Our design implements 32 instructions across six types and utilizes the stack for storing return addresses, accumulator registers, and arguments. A stack pointer is also utilized to save accumulator values before transferring control to another procedure.
